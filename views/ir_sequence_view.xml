@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+	
+    	<record id="daily_sequence_view" model="ir.ui.view">
+      		<field name="name">maple.daily_sequence_view</field>
+      		<field name="model">ir.sequence</field>
+      		<field name="priority" eval="1"/>
+      		<field name="inherit_id" ref="base.sequence_view"/>
+      		<field name="arch" type="xml">
+        		<xpath expr="//field[@name='use_date_range']" position="after">
+                    <field name="daily_date_range" attrs="{'invisible': [('use_date_range', '=', False)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
