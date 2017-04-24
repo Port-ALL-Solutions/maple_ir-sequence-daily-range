@@ -42,6 +42,6 @@ class IrSequence(models.Model):
 
         else:
         
-            seq_date_range = super(IrSequence,self)._create_date_range_seq()
+            seq_date_range = super(IrSequence,self)._create_date_range_seq(date)
 
         return seq_date_range
